@@ -1,9 +1,13 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-.orbit-image {
-  width: 100%;
-  @include breakpoint (small) {
-    width: 30%;
+.orbit-container {
+  background-color: #f3c1e9;
+  .orbit-image {
+    width: 100%;
+    @include breakpoint (small) {
+      width: 30%;
+      margin-left: 35%;
+    }
   }
 }
