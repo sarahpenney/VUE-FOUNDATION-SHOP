@@ -34,29 +34,23 @@ var me = new Vue ({
 //     }
 // });
 
-var shoppingList = new Vue ({
-    el: '#shoppingList',
+var wishList = new Vue ({
+    el: '#wishList',
     data: {
         list: [ 'tampons', 'ice-cream' ],
-        item: ''
+        item: '',
+        menu: [
+          {text: "Melody", price: "£3.10p", imageSrc: "images/ada.jpg"},
+          {text: "Keeper", price: "£2.30p", imageSrc: "/images/face.jpg"},
+          {text: "Me", price: "£1.20p", imageSrc: "/images/IMG_1188.jpg"},
+          {text: "Jason", price: "£2.40p", imageSrc: "/images/static1.squarespace.png"}
+        ]
     },
     methods: {
         addToList: function () {
-            this.list.push(this.item);
-            delete(this.item);
+          //TODO: add value of whichever ou clicked and not just first one
+            this.list.push(this.menu[0].text);
+            // delete(this.item);
         }
-    }
-});
-
-
-var products = new Vue ({
-    el: '#products',
-    data: {
-        menu: [
-          {text: "Melody:", price: "£3.10p", imageSrc: "images/ada.jpg"},
-          {text: "Keeper:", price: "£2.30p", imageSrc: "/images/face.jpg"},
-          {text: "Me:", price: "£1.20p", imageSrc: "/images/IMG_1188.jpg"},
-          {text: "Jason:", price: "£2.40p", imageSrc: "/images/static1.squarespace.png"}
-        ]
     }
 });
