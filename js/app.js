@@ -23,16 +23,6 @@ var me = new Vue ({
   }
 });
 
-var list = new Vue ({
-    el: '#list',
-    data: {
-        menu: [
-            {text: "Vue"},
-            {text: "Foundation"},
-            {text: "Email"}
-        ]
-    }
-});
 
 var helloButton = new Vue ({
     el: '#hello',
@@ -55,5 +45,18 @@ var shoppingList = new Vue ({
             this.list.push(this.item);
             delete(this.item);
         }
+    }
+});
+
+
+var products = new Vue ({
+    el: '#products',
+    data: {
+        menu: [
+          {text: "Melody", price: "10p", imageSrc: "images/ada.jpg"},
+          {text: "Keeper", price: "30p", imageSrc: "/images/face.jpg"},
+          {text: "Me", price: "20p", imageSrc: "/images/IMG_1188.jpg"},
+          {text: "Jason", price: "40p", imageSrc: "/images/static1.squarespace.png"}
+        ]
     }
 });
